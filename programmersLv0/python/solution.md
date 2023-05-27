@@ -31,3 +31,23 @@ def solution(polynomial):
     else:
         return xNum+"x"
 ```
+
+## OX퀴즈
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120907
+-   python
+
+```py
+def check(quiz):
+    ans = 0
+    quizList = quiz.split(" ")
+    if quizList[1] == "+":
+        return "O" if int(quizList[0])+int(quizList[2]) == int(quizList[4]) else "X"
+    else:
+        return "O" if int(quizList[0])-int(quizList[2]) == int(quizList[4]) else "X"
+
+
+def solution(quiz):
+    answer = list(map(check,quiz))
+    return answer
+```
