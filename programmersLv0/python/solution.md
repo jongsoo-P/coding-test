@@ -3,7 +3,7 @@
 ## 특이한 정렬
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120880
--   python
+-   Python3
 
 ```py
 def solution(numlist, n):
@@ -14,7 +14,7 @@ def solution(numlist, n):
 ## 다항식 더하기
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120863
--   python
+-   Python3
 
 ```py
 def solution(polynomial):
@@ -35,7 +35,7 @@ def solution(polynomial):
 ## OX퀴즈
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120907
--   python
+-   Python3
 
 ```py
 def check(quiz):
@@ -51,3 +51,23 @@ def solution(quiz):
     answer = list(map(check,quiz))
     return answer
 ```
+
+## 중복된 숫자 개수
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120583
+-   JavaScript
+
+```javascript
+function solution(array, n) {
+    var answer = array.filter(x=> x==n).length;
+    return answer;
+}
+```
+
+-   Python3
+```py
+def solution(array, n):
+    answer = array.count(n)
+    return answer
+```
+
