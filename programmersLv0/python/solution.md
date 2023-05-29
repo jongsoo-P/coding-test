@@ -82,8 +82,6 @@ from collections import deque
 def solution(A, B):
     B = deque(B)
     loopLen = len(A)
-    if A == B:
-        return 0
     loopCnt = 0
     while loopCnt < loopLen:
         if A == "".join(B):
