@@ -80,13 +80,13 @@ def solution(array, n):
 from collections import deque
 
 def solution(A, B):
-    B = deque(B)
+    A = deque(A)
     loopLen = len(A)
     loopCnt = 0
     while loopCnt < loopLen:
-        if A == "".join(B):
+        if B == "".join(A):
             return loopCnt
-        B.rotate(-1)
+        A.rotate(1)
         loopCnt += 1
     return -1
 ```
