@@ -71,3 +71,24 @@ def solution(array, n):
     return answer
 ```
 
+## 문자열 밀기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120921
+-   Python3
+
+```py
+from collections import deque
+
+def solution(A, B):
+    B = deque(B)
+    loopLen = len(A)
+    if A == B:
+        return 0
+    loopCnt = 0
+    while loopCnt < loopLen:
+        if A == "".join(B):
+            return loopCnt
+        B.rotate(-1)
+        loopCnt += 1
+    return -1
+```
