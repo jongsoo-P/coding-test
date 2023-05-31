@@ -90,3 +90,22 @@ def solution(A, B):
         loopCnt += 1
     return -1
 ```
+
+## 겹치는 선분의 길이
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120876
+-   Python3
+
+```py
+def solution(lines):
+    totalLine = [0 for i in range(0,201)]
+    for lineLen in lines:
+        i = lineLen[0]
+        while i <lineLen[1]:
+            if totalLine[i+100] == 0:
+                totalLine[i+100] = 1
+            else:
+                totalLine[i+100] = 2
+            i += 1
+    return len(list(filter(lambda x:True if x==2 else False,totalLine)))
+```
