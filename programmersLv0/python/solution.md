@@ -109,3 +109,20 @@ def solution(lines):
             i += 1
     return len(list(filter(lambda x:True if x==2 else False,totalLine)))
 ```
+
+## 연속된 수의 합
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120923
+-   Python3
+
+```py
+import math
+def solution(num, total):
+    answer = []
+    half = num/2
+    if num%2 == 0:
+        answer = [i for i in range(int(math.floor(total/num)-half+1),int(math.ceil(total/num)+half))]
+    else:
+        answer = [i for i in range(math.floor(total/num)-math.floor(half),math.ceil(total/num)+math.floor(half)+1)]
+    return answer
+```
