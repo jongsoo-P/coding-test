@@ -126,3 +126,14 @@ def solution(num, total):
         answer = [i for i in range(math.floor(total/num)-math.floor(half),math.ceil(total/num)+math.floor(half)+1)]
     return answer
 ```
+
+## 양꼬치
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120830
+-   Python3
+
+```py
+def solution(n, k):
+    answer = n*12000+(k-int(n/10))*2000
+    return answer
+```
