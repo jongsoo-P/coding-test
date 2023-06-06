@@ -137,3 +137,14 @@ def solution(n, k):
     answer = n*12000+(k-int(n/10))*2000
     return answer
 ```
+
+## 다음에 올 숫자
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120924
+-   Python3
+
+```py
+def solution(common):
+    answer = int(common[len(common)-1]*(common[1]/common[0])) if sum(common[0:3])/3 != common[1] else common[len(common)-1]+(common[1]-common[0])
+    return answer
+```
