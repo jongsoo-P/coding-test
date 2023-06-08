@@ -52,3 +52,25 @@ def solution(numbers,hand):
                     answer += "L"
     return answer
 ```
+
+## 체육복
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/42862
+-   Python3
+
+```py
+def solution(n, lost, reserve):
+    intersection = list(set(reserve) & set(lost))
+    lost = list(set(lost)-set(intersection))
+    reserve = list(set(reserve)-set(intersection))
+    tempLost = [i for i in lost]
+    for i in tempLost:
+        if i-1 in reserve:
+            lost.remove(i)
+            reserve.remove(i-1)
+        elif i+1 in reserve:
+            lost.remove(i)
+            reserve.remove(i+1)
+    answer = n-len(lost)
+    return answer
+```
