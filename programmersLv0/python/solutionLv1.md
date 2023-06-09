@@ -74,3 +74,14 @@ def solution(n, lost, reserve):
     answer = n-len(lost)
     return answer
 ```
+
+## 내적
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/70128
+-   Python3
+
+```py
+def solution(a, b):
+    answer = sum([i*j for i, j in zip(a,b)])
+    return answer
+```
