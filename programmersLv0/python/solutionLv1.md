@@ -85,3 +85,19 @@ def solution(a, b):
     answer = sum([i*j for i, j in zip(a,b)])
     return answer
 ```
+
+## 삼총사
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/131705
+-   Python3
+
+```py
+def solution(number):
+    answer = 0
+    for idx1,i in enumerate(number):
+        for idx2,j in enumerate(number[idx+1:]):
+            for k in number[idx1+idx2+2:]:
+                if i+j+k ==0:
+                    answer += 1
+    return answer
+```
