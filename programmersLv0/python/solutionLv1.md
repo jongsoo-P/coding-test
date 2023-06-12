@@ -101,3 +101,15 @@ def solution(number):
                     answer += 1
     return answer
 ```
+
+## 추억점수
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/176963
+-   Python3
+
+```py
+def solution(name, yearning, photo):
+    point = {name[i]:yearning[i] for i in range(len(name))}
+    answer = [sum([point[j] for j in i if j in point]) for i in photo]
+    return answer
+```
