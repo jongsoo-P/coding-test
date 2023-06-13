@@ -113,3 +113,21 @@ def solution(name, yearning, photo):
     answer = [sum([point[j] for j in i if j in point]) for i in photo]
     return answer
 ```
+
+## 바탕화면 정리
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/161990
+-   Python3
+
+```py
+def solution(wallpaper):
+    xAxis = []
+    yAxis = []
+    for yIdx,i in enumerate(wallpaper):
+        for xIdx,j in enumerate(i):
+            if j == "#":
+                yAxis.append(yIdx)
+                xAxis.append(xIdx)
+    answer = [min(yAxis),min(xAxis),max(yAxis)+1,max(xAxis)+1]
+    return answer
+```
