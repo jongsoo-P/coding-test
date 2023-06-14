@@ -131,3 +131,24 @@ def solution(wallpaper):
     answer = [min(yAxis),min(xAxis),max(yAxis)+1,max(xAxis)+1]
     return answer
 ```
+
+## 신고 결과 받기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/92334
+-   Python3
+
+```py
+def solution(id_list, report, k):
+    countDict = {i:0 for i in id_list}
+    reportDict = {i:[] for i in id_list}
+    for i in report:
+        ids = i.split(" ")
+        if ids[0] not in reportDict[ids[1]]:
+            reportDict[ids[1]].append(ids[0])
+    for key,val in reportDict.items():
+        if len(val) >= k:
+            for id in val:
+                countDict[id] += 1
+    answer = [countDict[i] for i in countDict]
+    return answer
+```
