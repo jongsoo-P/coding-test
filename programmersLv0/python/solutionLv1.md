@@ -152,3 +152,28 @@ def solution(id_list, report, k):
     answer = [countDict[i] for i in countDict]
     return answer
 ```
+
+## 대충 만든 자판
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/160586
+-   Python3
+
+```py
+def solution(keymap, targets):
+    answer = []
+    alphabets = {chr(i):200 for i in range(65,91)}
+    for key in keymap:
+        for idx,alphabet in enumerate(key):
+            alphabets[alphabet] = (idx+1) if alphabets[alphabet] > idx+1 else alphabets[alphabet]
+    for target in targets:
+        sumKey = []
+        for key in target:
+            if alphabets[key] == 200:
+                sumKey.clear()
+                sumKey.append(-1)
+                break
+            else:
+                sumKey.append(alphabets[key])
+        answer.append(sum(sumKey))
+    return answer
+```
