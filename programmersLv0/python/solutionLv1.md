@@ -177,3 +177,28 @@ def solution(keymap, targets):
         answer.append(sum(sumKey))
     return answer
 ```
+
+## 기사단원의 무기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/136798
+-   Python3
+
+```py
+def measure(num):
+    answer = set()
+    for i in range(1,int(num**(1/2)+1)):
+        if num % i == 0:
+            answer.add(i)
+            answer.add(num//i)
+    return len(answer)
+
+def solution(number, limit, power):
+    answer = []
+    for i in range(1,number+1):
+        num = measure(i)
+        if num <= limit:
+            answer.append(num)
+        else:
+            answer.append(power)
+    return sum(answer)
+```
