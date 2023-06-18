@@ -6,16 +6,24 @@
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12906
 -   Python3
 
+<details>
+<summary>접기/펼치기</summary>
+
 ```py
 def solution(arr):
     answer = [arr[0]] + [arr[i] for i in range(1,len(arr)) if arr[i-1]!=arr[i]]
     return answer
 ```
+</details>
+
 
 ## 키패드 누르기
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/67256
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 def solution(numbers,hand):
@@ -52,11 +60,16 @@ def solution(numbers,hand):
                     answer += "L"
     return answer
 ```
+</details>
+
 
 ## 체육복
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/42862
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 def solution(n, lost, reserve):
@@ -74,22 +87,32 @@ def solution(n, lost, reserve):
     answer = n-len(lost)
     return answer
 ```
+</details>
+
 
 ## 내적
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/70128
 -   Python3
 
+<details>
+<summary>접기/펼치기</summary>
+
 ```py
 def solution(a, b):
     answer = sum([i*j for i, j in zip(a,b)])
     return answer
 ```
+</details>
+
 
 ## 삼총사
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/131705
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 def solution(number):
@@ -101,11 +124,16 @@ def solution(number):
                     answer += 1
     return answer
 ```
+</details>
+
 
 ## 추억점수
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/176963
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 def solution(name, yearning, photo):
@@ -113,11 +141,16 @@ def solution(name, yearning, photo):
     answer = [sum([point[j] for j in i if j in point]) for i in photo]
     return answer
 ```
+</details>
+
 
 ## 바탕화면 정리
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/161990
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 def solution(wallpaper):
@@ -131,11 +164,16 @@ def solution(wallpaper):
     answer = [min(yAxis),min(xAxis),max(yAxis)+1,max(xAxis)+1]
     return answer
 ```
+</details>
+
 
 ## 신고 결과 받기
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/92334
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 def solution(id_list, report, k):
@@ -152,11 +190,16 @@ def solution(id_list, report, k):
     answer = [countDict[i] for i in countDict]
     return answer
 ```
+</details>
+
 
 ## 대충 만든 자판
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/160586
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 def solution(keymap, targets):
@@ -177,11 +220,16 @@ def solution(keymap, targets):
         answer.append(sum(sumKey))
     return answer
 ```
+</details>
+
 
 ## 기사단원의 무기
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/136798
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 def measure(num):
@@ -202,12 +250,17 @@ def solution(number, limit, power):
             answer.append(power)
     return sum(answer)
 ```
+</details>
+
 
 ## 공원 산책
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/172928
 -   Python3
-  
+
+<details>
+<summary>접기/펼치기</summary>
+
 ```py
 def solution(park, routes):
     maxX = len(park[0])
@@ -243,3 +296,4 @@ def solution(park, routes):
             
     return startPoint
 ```
+</details>  

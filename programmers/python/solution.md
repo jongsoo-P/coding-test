@@ -5,16 +5,24 @@
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120880
 -   Python3
 
+<details>
+<summary>접기/펼치기</summary>
+
 ```py
 def solution(numlist, n):
     answer = sorted(numlist, key = lambda x: (abs(x-n),-x))
     return answer
 ```
+</details>
+
 
 ## 다항식 더하기
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120863
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 def solution(polynomial):
@@ -31,11 +39,16 @@ def solution(polynomial):
     else:
         return xNum+"x"
 ```
+</details>
+
 
 ## OX퀴즈
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120907
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 def check(quiz):
@@ -51,12 +64,19 @@ def solution(quiz):
     answer = list(map(check,quiz))
     return answer
 ```
+</details>
+
 
 ## 중복된 숫자 개수
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120583
 -   JavaScript
+-   Python3
 
+<details>
+<summary>접기/펼치기</summary>
+
+-   JavaScript
 ```javascript
 function solution(array, n) {
     var answer = array.filter(x=> x==n).length;
@@ -70,11 +90,16 @@ def solution(array, n):
     answer = array.count(n)
     return answer
 ```
+</details>
+
 
 ## 문자열 밀기
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120921
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 from collections import deque
@@ -90,11 +115,16 @@ def solution(A, B):
         loopCnt += 1
     return -1
 ```
+</details>
+
 
 ## 겹치는 선분의 길이
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120876
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 def solution(lines):
@@ -109,11 +139,16 @@ def solution(lines):
             i += 1
     return len(list(filter(lambda x:True if x==2 else False,totalLine)))
 ```
+</details>
+
 
 ## 연속된 수의 합
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120923
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 import math
@@ -126,25 +161,36 @@ def solution(num, total):
         answer = [i for i in range(math.floor(total/num)-math.floor(half),math.ceil(total/num)+math.floor(half)+1)]
     return answer
 ```
+</details>
+
 
 ## 양꼬치
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120830
 -   Python3
 
+<details>
+<summary>접기/펼치기</summary>
+
 ```py
 def solution(n, k):
     answer = n*12000+(k-int(n/10))*2000
     return answer
 ```
+</details>
+
 
 ## 다음에 올 숫자
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/120924
 -   Python3
 
+<details>
+<summary>접기/펼치기</summary>
+
 ```py
 def solution(common):
     answer = int(common[len(common)-1]*(common[1]/common[0])) if sum(common[0:3])/3 != common[1] else common[len(common)-1]+(common[1]-common[0])
     return answer
 ```
+</details>

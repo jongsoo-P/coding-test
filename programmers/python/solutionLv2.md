@@ -1,9 +1,13 @@
 # Lv2
 
+
 ## 올바른 괄호
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12909
 -   Python3
+
+<details>
+<summary>접기/펼치기</summary>
 
 ```py
 def solution(s):
@@ -19,3 +23,4 @@ def solution(s):
         return False
     return True
 ```
+</details>
