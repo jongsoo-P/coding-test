@@ -202,3 +202,44 @@ def solution(number, limit, power):
             answer.append(power)
     return sum(answer)
 ```
+
+## 공원 산책
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/172928
+-   Python3
+  
+```py
+def solution(park, routes):
+    maxX = len(park[0])
+    maxY = len(park)
+    partY = [[] for i in range(len(park[0]))]
+    startPoint = [-1,-1]
+
+    for y,yText in enumerate(park):
+        for x,xText in enumerate(list(yText)):
+            if xText == "S":
+                startPoint[0] = y
+                startPoint[1] = x
+            partY[x].append(xText)
+
+    for routeText in routes:
+        route = routeText.split(" ")
+        if route[0] == "E":
+            endPoint = startPoint[1] + int(route[1])
+            startPoint[1] = endPoint if ((endPoint < maxX) and 
+                ("X" not in park[startPoint[0]][startPoint[1]:endPoint+1])) else startPoint[1]
+        elif route[0] == "W":
+            endPoint = startPoint[1] - int(route[1])
+            startPoint[1] = endPoint if ((endPoint > -1) and 
+                ("X" not in park[startPoint[0]][(endPoint if endPoint > -1 else 0):startPoint[1]+1])) else startPoint[1]
+        elif route[0] == "S":
+            endPoint = startPoint[0] + int(route[1])
+            startPoint[0] = endPoint if ((endPoint < maxY) and 
+                ("X" not in partY[startPoint[1]][startPoint[0]:endPoint+1])) else startPoint[0]
+        else:
+            endPoint = startPoint[0] - int(route[1])
+            startPoint[0] = endPoint if ((endPoint > -1) and 
+                ("X" not in partY[startPoint[1]][(endPoint if endPoint > -1 else 0):startPoint[0]+1])) else startPoint[0]
+            
+    return startPoint
+```
