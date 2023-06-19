@@ -297,3 +297,28 @@ def solution(park, routes):
     return startPoint
 ```
 </details>  
+
+
+## 개인정보 수집 유효기간
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/150370
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(today, terms, privacies):
+    answer = []
+    months = {i.split(" ")[0]: int(i.split(" ")[1]) * 28 for i in terms}
+    todayArr = today.split(".")
+    todayDays = int(todayArr[0]) * 12 * 28 + int(todayArr[1]) * 28 + int(todayArr[2])
+    for idx, i in enumerate(privacies):
+        iArr = i.split(" ")
+        destructionArr = iArr[0].split(".")
+        destruction = int(destructionArr[0]) * 12 * 28 + int(destructionArr[1]) * 28 + int(destructionArr[2])
+        if destruction + months[iArr[1]] <= todayDays:
+            answer.append(idx+1)
+    return answer
+```
+</details>  
