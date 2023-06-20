@@ -321,4 +321,27 @@ def solution(today, terms, privacies):
             answer.append(idx+1)
     return answer
 ```
-</details>  
+</details>
+
+
+## 신규 아이디 추천
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/72410
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+import re
+
+def solution(new_id):
+    answer = re.sub('\\.\\.+','.',''.join(re.findall('[a-z0-9\\.\\-\\_]',new_id.lower())))
+    answer = re.sub('\\.$','',re.sub('^\\.','',answer))
+    answer = 'a' if len(answer) == 0 else answer
+    answer = re.sub('\\.$','',answer[:15])
+    while len(answer) < 3:
+        answer += answer[-1]
+    return answer
+```
+</details>
