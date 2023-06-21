@@ -345,3 +345,21 @@ def solution(new_id):
     return answer
 ```
 </details>
+
+
+## 둘만의 암호
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/155652
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(s, skip, index):
+    skips = [ord(i) for i in skip]
+    asciis = [i for i in range(97,123) if i not in skips]
+    answer = ''.join([chr(asciis[(asciis.index(ord(i))+index)%len(asciis)]) for i in s])
+    return answer
+```
+</details>
