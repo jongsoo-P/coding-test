@@ -363,3 +363,26 @@ def solution(s, skip, index):
     return answer
 ```
 </details>
+
+
+## 덧칠하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/161989
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(n, m, section):
+    answer = 0
+    nextPaint = 0
+    for i in section:
+        if i < nextPaint:
+            continue
+        answer += 1
+        nextPaint = i + m
+    return answer
+```
+</details>
+
