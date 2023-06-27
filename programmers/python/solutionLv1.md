@@ -386,3 +386,29 @@ def solution(n, m, section):
 ```
 </details>
 
+
+## 성격 유형 검사하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/118666
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(survey, choices):
+    points = {"R": 0, "T": 0, "C": 0, "F": 0, "J": 0, "M": 0, "A": 0, "N": 0}
+    for idx,surv in enumerate(survey):
+        point= choices[idx] - 4
+        if point < 0:
+            points[surv[0]] += abs(point)
+        else:
+            points[surv[1]] += point
+    answer = ''
+    answer += "T" if points["R"] < points["T"] else "R"
+    answer += "F" if points["C"] < points["F"] else "C"
+    answer += "M" if points["J"] < points["M"] else "J"
+    answer += "N" if points["A"] < points["N"] else "A"
+    return answer
+```
+</details>
