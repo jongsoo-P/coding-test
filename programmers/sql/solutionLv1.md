@@ -37,3 +37,17 @@ where ugb.CREATED_DATE >= "2022-10-01" and ugb.CREATED_DATE < "2022-11-01"
 order by ugr.CREATED_DATE, ugb.TITLE;
 ```
 </details>
+
+
+## 최댓값 구하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/59415
+-   MySQL
+
+<details>
+<summary>접기/펼치기</summary>
+
+```sql
+SELECT max(datetime) from ANIMAL_INS;
+```
+</details>
