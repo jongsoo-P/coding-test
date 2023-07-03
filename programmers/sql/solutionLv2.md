@@ -99,3 +99,63 @@ FROM ANIMAL_INS
 ORDER BY ANIMAL_ID;
 ```
 </details>
+
+
+## 가격이 제일 비싼 식품의 정보 출력하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/131115
+-   MySQL
+
+<details>
+<summary>접기/펼치기</summary>
+
+```sql
+SELECT 
+*
+FROM FOOD_PRODUCT
+ORDER BY PRICE DESC
+LIMIT 1;
+```
+</details>
+
+
+## 3월에 태어난 여성 회원 목록 출력하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/131120
+-   MySQL
+
+<details>
+<summary>접기/펼치기</summary>
+
+```sql
+SELECT
+    MEMBER_ID,
+    MEMBER_NAME,
+    GENDER,
+    DATE_FORMAT(DATE_OF_BIRTH,'%Y-%m-%d') AS DATE_OF_BIRTH
+FROM MEMBER_PROFILE
+WHERE DATE_FORMAT(DATE_OF_BIRTH,'%m') = '03'
+    AND GENDER = 'W'
+    AND TLNO IS NOT NULL
+ORDER BY MEMBER_ID;
+```
+</details>
+
+
+## 카테고리 별 상품 개수 구하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/131120
+-   MySQL
+
+<details>
+<summary>접기/펼치기</summary>
+
+```sql
+SELECT
+    LEFT(PRODUCT_CODE,2) AS CATEGORY,
+    COUNT(PRODUCT_ID) AS PRODUCTS
+FROM PRODUCT
+GROUP BY (LEFT(PRODUCT_CODE,2))
+ORDER BY CATEGORY;
+```
+</details>
