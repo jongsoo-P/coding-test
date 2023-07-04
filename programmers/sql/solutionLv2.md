@@ -159,3 +159,63 @@ GROUP BY (LEFT(PRODUCT_CODE,2))
 ORDER BY CATEGORY;
 ```
 </details>
+
+
+## 가격대 별 상품 개수 구하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/131530
+-   MySQL
+
+<details>
+<summary>접기/펼치기</summary>
+
+```sql
+SELECT
+    TRUNCATE(PRICE,-4) AS PRICE_GROUP,
+    count(PRODUCT_ID) AS PRODUCTS
+FROM PRODUCT
+GROUP BY TRUNCATE(PRICE,-4)
+ORDER BY PRICE_GROUP;
+```
+</details>
+
+
+## 상품 별 오프라인 매출 구하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/131533
+-   MySQL
+
+<details>
+<summary>접기/펼치기</summary>
+
+```sql
+SELECT
+    PRODUCT_CODE,
+    SUM(SALES_AMOUNT)*PRICE AS SALES
+FROM PRODUCT P
+    INNER JOIN OFFLINE_SALE OS ON P.PRODUCT_ID = OS.PRODUCT_ID
+GROUP BY PRODUCT_CODE
+ORDER BY SALES DESC, PRODUCT_CODE;
+```
+</details>
+
+
+## 재구매가 일어난 상품과 회원 리스트 구하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/131536
+-   MySQL
+
+<details>
+<summary>접기/펼치기</summary>
+
+```sql
+SELECT
+    USER_ID,
+    PRODUCT_ID
+FROM ONLINE_SALE
+GROUP BY USER_ID, PRODUCT_ID
+HAVING COUNT(ONLINE_SALE_ID) > 1
+ORDER BY USER_ID, PRODUCT_ID DESC;
+```
+</details>
+ 
