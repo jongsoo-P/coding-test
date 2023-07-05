@@ -219,3 +219,105 @@ ORDER BY USER_ID, PRODUCT_ID DESC;
 ```
 </details>
  
+
+## 진료과별 총 예약 횟수 출력하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/132202
+-   MySQL
+
+<details>
+<summary>접기/펼치기</summary>
+
+```sql
+SELECT
+    MCDP_CD AS '진료과코드',
+    COUNT(APNT_NO) AS '5월예약건수'
+FROM APPOINTMENT
+WHERE DATE_FORMAT(APNT_YMD,'%Y%m') = '202205'
+GROUP BY MCDP_CD
+ORDER BY COUNT(APNT_NO), MCDP_CD;
+```
+</details>
+
+
+## 성분으로 구분한 아이스크림 총 주문량
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/133026
+-   MySQL
+
+<details>
+<summary>접기/펼치기</summary>
+
+```sql
+SELECT
+    INGREDIENT_TYPE,
+    SUM(TOTAL_ORDER) AS TOTAL_ORDER
+FROM FIRST_HALF FH
+LEFT JOIN ICECREAM_INFO II ON FH.FLAVOR = II.FLAVOR
+GROUP BY INGREDIENT_TYPE
+ORDER BY TOTAL_ORDER;
+```
+</details>
+
+
+## 조건에 맞는 도서와 저자 리스트 출력하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/144854
+-   MySQL
+
+<details>
+<summary>접기/펼치기</summary>
+
+```sql
+SELECT
+    B.BOOK_ID,
+    A.AUTHOR_NAME,
+    DATE_FORMAT(B.PUBLISHED_DATE,'%Y-%m-%d') AS PUBLISHED_DATE
+FROM BOOK B
+LEFT JOIN AUTHOR A ON B.AUTHOR_ID = A.AUTHOR_ID
+WHERE B.CATEGORY = '경제'
+ORDER BY PUBLISHED_DATE;
+```
+</details>
+
+
+## 자동차 종류 별 특정 옵션이 포함된 자동차 수 구하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/151137
+-   MySQL
+
+<details>
+<summary>접기/펼치기</summary>
+
+```sql
+SELECT
+    CAR_TYPE,
+    COUNT(CAR_ID) AS CARS
+FROM CAR_RENTAL_COMPANY_CAR
+WHERE OPTIONS LIKE '%통풍시트%'
+    OR OPTIONS LIKE '%열선시트%'
+    OR OPTIONS LIKE '%가죽시트%'
+GROUP BY CAR_TYPE
+ORDER BY CAR_TYPE;
+```
+</details>
+
+
+## 자동차 평균 대여 기간 구하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/157342
+-   MySQL
+
+<details>
+<summary>접기/펼치기</summary>
+
+```sql
+SELECT
+    CAR_ID,
+    ROUND(AVG((TIMESTAMPDIFF(DAY, START_DATE, END_DATE)+1)),1) AS AVERAGE_DURATION
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+GROUP BY CAR_ID
+HAVING AVERAGE_DURATION >= 7
+ORDER BY AVERAGE_DURATION DESC, CAR_ID DESC;
+```
+</details>
