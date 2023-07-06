@@ -412,3 +412,27 @@ def solution(survey, choices):
     return answer
 ```
 </details>
+
+
+## 카드 뭉치
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/159994
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(cards1, cards2, goal):
+    i1=0
+    i2=0
+    for word in goal:
+        if i1 < len(cards1) and word == cards1[i1]:
+            i1 += 1
+        elif i2 < len(cards2) and word == cards2[i2]:
+            i2 += 1
+        else:
+            return "No"
+    return "Yes"
+```
+</details>
