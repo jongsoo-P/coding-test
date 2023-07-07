@@ -436,3 +436,24 @@ def solution(cards1, cards2, goal):
     return "Yes"
 ```
 </details>
+
+
+## 크기가 작은 부분문자열
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/147355
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(t, p):
+    answer = 0
+    lenP = len(p)
+    lenT = len(t)
+    intP = int(''.join(p))
+    answer = [i for i in range(0,lenT-lenP+1)
+            if int(''.join(t[i:i+lenP])) <= intP]
+    return len(answer)
+```
+</details>
