@@ -457,3 +457,26 @@ def solution(t, p):
     return len(answer)
 ```
 </details>
+
+
+## 가장 가까운 같은 글자
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/142086
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(s):
+    answer = []
+    dictChar = {}
+    for idx, i in enumerate(s):
+        if i not in dictChar:
+            answer.append(-1)
+        else:
+            answer.append(idx - dictChar[i])
+        dictChar[i] = idx
+    return answer
+```
+</details>
