@@ -480,3 +480,35 @@ def solution(s):
     return answer
 ```
 </details>
+
+
+## 문자열 나누기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/140108
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(s):
+    answer = 0
+    lenS = len(s)
+    idx = 0
+    while idx < lenS:
+        tempIdx = idx
+        char = s[idx]
+        count = 0
+        for i in s[idx:]:
+            if i == char:
+                count += 1
+            else:
+                count -= 1
+            tempIdx += 1
+            if count == 0:
+                break
+        idx = tempIdx
+        answer += 1
+    return answer
+```
+</details>
