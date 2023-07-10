@@ -512,3 +512,28 @@ def solution(s):
     return answer
 ```
 </details>
+
+
+## 명예의 전당 (1)
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/138477
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(k, score):
+    scores = []
+    answer = []
+    for idx,s in enumerate(score):
+        scores.append(s)
+        scores.sort(reverse=True)
+        if idx < k:
+            answer.append(scores[idx])
+        else:
+            answer.append(scores[k-1])
+            scores = scores[:k]
+    return answer
+```
+</details>
