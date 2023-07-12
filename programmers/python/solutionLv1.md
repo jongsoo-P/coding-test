@@ -556,3 +556,22 @@ def solution(k, m, score):
     return answer
 ```
 </details>
+
+
+## 푸드 파이트 대회
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/134240
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(food):
+    answer = '0'
+    for i in range(len(food)-1,0,-1):
+        temp = ''.join(map(str,[i for j in range(food[i]//2)]))
+        answer = temp + answer + temp
+    return answer
+```
+</details>
