@@ -575,3 +575,36 @@ def solution(food):
     return answer
 ```
 </details>
+
+
+## 햄버거 만들기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/133502
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(ingredient):
+    if len(ingredient) < 4:
+        return 0
+    stackList = [ingredient[i] for i in range(3)]
+    answer = 0
+    for i in ingredient[3:]:
+        stackList.append(i)
+        stackSize = len(stackList)-1
+        if stackSize < 3:
+            continue
+        if (stackList[stackSize] == 1 and
+            stackList[stackSize-1] == 3 and
+            stackList[stackSize-2] == 2 and
+            stackList[stackSize-3] == 1):
+            answer += 1
+            stackList.pop()
+            stackList.pop()
+            stackList.pop()
+            stackList.pop()
+    return answer
+```
+</details>
