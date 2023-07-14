@@ -608,3 +608,43 @@ def solution(ingredient):
     return answer
 ```
 </details>
+
+
+## 옹알이 (2)
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/133499
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+import re
+def solution(babbling):
+    answer = 0
+    for babble in babbling:
+        if re.match("^(aya|ye|woo|ma)*$",babble) and re.match(".*(ayaaya|yeye|woowoo|mama).*",babble) == None:
+            answer += 1
+    return answer
+```
+</details>
+
+
+## 콜라 문제
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/132267
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(a, b, n):
+    answer = 0
+    while n >= a:
+        newN = (n // a) * b
+        n = newN + n % a
+        answer += newN
+    return answer
+```
+</details>
