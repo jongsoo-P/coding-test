@@ -648,3 +648,29 @@ def solution(a, b, n):
     return answer
 ```
 </details>
+
+
+## 숫자 짝꿍
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/131128
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(X, Y):
+    answer = []
+    for i in range(9,-1,-1):
+        countX = X.count(str(i))
+        countY = Y.count(str(i))
+        countI = countX if countX < countY else countY
+        answer = answer + [str(i) for j in range(countI)]
+    if len(answer) == 0:
+        return "-1"
+    result = ''.join(answer)
+    if re.match(r"^0*$",result) != None:
+        return "0"
+    return result
+```
+</details>
