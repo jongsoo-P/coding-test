@@ -674,3 +674,49 @@ def solution(X, Y):
     return result
 ```
 </details>
+
+
+## 나머지가 1이 되는 수 찾기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/87389
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(n):
+    answer = n - 1
+    for i in range(2,int(answer**(1/2))+1):
+        if answer % i == 0:
+            return i
+    return answer
+```
+</details>
+
+
+## 최소직사각형
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/86491
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(sizes):
+    width = []
+    height = []
+    for i in sizes:
+        if i[0] > i[1]:
+            width.append(i[0])
+            height.append(i[1])
+        else:
+            width.append(i[1])
+            height.append(i[0])
+    maxWidth = max(width)
+    maxHeight = max(height)
+    answer = maxHeight * maxWidth
+    return answer
+```
+</details>
