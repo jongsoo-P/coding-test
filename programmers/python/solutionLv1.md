@@ -720,3 +720,33 @@ def solution(sizes):
     return answer
 ```
 </details>
+
+
+## 달리기 경주
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/178871
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(players, callings):
+    rankingNumber = {}
+    rankingName = {}
+    for idx,name in enumerate(players):
+        rankingNumber[idx+1]=name
+        rankingName[name]=idx + 1
+    tempName = ""
+    for name in callings:
+        changeRanking = rankingName[name] - 1
+        changeName = rankingNumber[changeRanking]
+        rankingName[name] = changeRanking 
+        rankingName[changeName] = changeRanking + 1
+
+        rankingNumber[changeRanking] = name
+        rankingNumber[changeRanking+1] = changeName
+    answer = [rankingNumber[i] for i in range(1, len(players)+1)]
+    return answer
+```
+</details>
