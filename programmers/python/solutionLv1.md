@@ -750,3 +750,35 @@ def solution(players, callings):
     return answer
 ```
 </details>
+
+
+## 없는 숫자 더하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/86051
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(numbers):
+    answer = 45 - sum(numbers)
+    return answer
+```
+</details>
+
+
+## 부족한 금액 계산하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/82612
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(price, money, count):
+    answer = count * (2*price +(count-1)*price)/2
+    return answer - money if answer > money else 0
+```
+</details>
