@@ -782,3 +782,35 @@ def solution(price, money, count):
     return answer - money if answer > money else 0
 ```
 </details>
+
+
+## 숫자 문자열과 영단어
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/81301
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(s):
+    text = {
+        0:'zero',
+        1:'one',
+        2:'two',
+        3:'three',
+        4:'four',
+        5:'five',
+        6:'six',
+        7:'seven',
+        8:'eight',
+        9:'nine'
+    }
+    for i in text:
+        s = s.replace(text[i],str(i))
+    answer = int(s)
+    return answer
+
+print(solution("2three45sixseven"))
+```
+</details>
