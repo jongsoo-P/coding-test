@@ -813,4 +813,31 @@ def solution(s):
 
 print(solution("2three45sixseven"))
 ```
+</detailst>
+
+
+## 로또의 최고 순위와 최저 순위
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/77484
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(lottos, win_nums):
+    answer = []
+    zero = 0
+    win_num = 0
+    for i in lottos:
+        if i==0:
+            zero += 1
+        elif i in win_nums:
+            win_num += 1
+    max_win = zero + win_num
+    rank = [6,6,5,4,3,2,1]
+    answer.append(rank[max_win])
+    answer.append(rank[win_num])
+    return answer
+```
 </details>
