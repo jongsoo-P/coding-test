@@ -813,7 +813,7 @@ def solution(s):
 
 print(solution("2three45sixseven"))
 ```
-</detailst>
+</details>
 
 
 ## 로또의 최고 순위와 최저 순위
