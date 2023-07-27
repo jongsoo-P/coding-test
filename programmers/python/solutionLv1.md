@@ -841,3 +841,24 @@ def solution(lottos, win_nums):
     return answer
 ```
 </details>
+
+
+## 두 개 뽑아서 더하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/68644
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(numbers):
+    answer = []
+    for idx,i in enumerate(numbers[:-1]):
+        for j in numbers[idx+1:]:
+            answer.append(i+j)
+    answer = list(set(answer))
+    answer.sort()
+    return answer
+```
+</details>
