@@ -862,3 +862,19 @@ def solution(numbers):
     return answer
 ```
 </details>
+
+
+## 음양 더하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/76501
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(absolutes, signs):
+    answer = [i if signs[idx] else -i for idx, i in enumerate(absolutes)]
+    return sum(answer)
+```
+</details>
