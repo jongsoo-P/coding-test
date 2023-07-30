@@ -878,3 +878,22 @@ def solution(absolutes, signs):
     return sum(answer)
 ```
 </details>
+
+
+## 음양 더하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/68935
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(n):
+    answer = ''
+    while(n>0):
+        answer += str(n%3)
+        n = n//3
+    return int(answer,3)
+```
+</details>
