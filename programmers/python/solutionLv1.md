@@ -880,7 +880,7 @@ def solution(absolutes, signs):
 </details>
 
 
-## 음양 더하기
+## 3진법 뒤집기
 
 -   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/68935
 -   Python3
