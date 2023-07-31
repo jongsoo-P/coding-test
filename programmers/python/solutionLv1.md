@@ -897,3 +897,22 @@ def solution(n):
     return int(answer,3)
 ```
 </details>
+
+
+## 제일 작은 수 제거하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12935
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(arr):
+    answer = arr
+    answer.remove(min(arr))
+    if len(answer) == 0:
+        return [-1]
+    return answer
+```
+</details>
