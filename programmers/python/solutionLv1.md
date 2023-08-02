@@ -916,3 +916,20 @@ def solution(arr):
     return answer
 ```
 </details>
+
+
+## 직사각형 별찍기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12969
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+a, b = map(int, input().strip().split(' '))
+c = '*'*a
+for i in range(b):
+    print(c)
+```
+</details>
