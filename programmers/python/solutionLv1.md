@@ -933,3 +933,35 @@ for i in range(b):
     print(c)
 ```
 </details>
+
+
+## x만큼 간격이 있는 n개의 숫자
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12954
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(x, n):
+    answer = [x * i for i in range(1, n+1)]
+    return answer
+```
+</details>
+
+
+## 행렬의 덧셈
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12950
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(arr1, arr2):
+    answer = [[a+b for a,b in zip(arr1[i],arr2[i])] for i in range(len(arr1))]
+    return answer
+```
+</details>
