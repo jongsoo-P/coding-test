@@ -965,3 +965,20 @@ def solution(arr1, arr2):
     return answer
 ```
 </details>
+
+
+## 하샤드 수
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12947
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(x):
+    sumX = sum(map(int,str(x)))
+    answer = True if x % sumX == 0 else False
+    return answer
+```
+</details>
