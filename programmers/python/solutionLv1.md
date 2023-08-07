@@ -982,3 +982,19 @@ def solution(x):
     return answer
 ```
 </details>
+
+
+## 평균 구하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12944
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(arr):
+    answer = sum(arr)/len(arr)
+    return answer
+```
+</details>
