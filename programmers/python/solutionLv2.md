@@ -123,3 +123,25 @@ def solution(n):
     return ans
 ```
 </details>
+
+
+# 뒤에 있는 큰 수 찾기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/154539
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(numbers):
+    answer = [-1 for i in range(len(numbers))]
+    stackArr = []
+    pass
+    for idx, i in enumerate(numbers):
+        while stackArr and numbers[stackArr[-1]] < i:
+            answer[stackArr.pop()] = i
+        stackArr.append(idx)
+    return answer
+```
+</details>
