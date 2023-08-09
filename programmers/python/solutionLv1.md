@@ -998,3 +998,19 @@ def solution(arr):
     return answer
 ```
 </details>
+
+
+## 수박수박수박수박수박수?
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12922
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(n):
+    answer = ''.join(['수' if i%2 == 0 else '박' for i in range(n)])
+    return answer
+```
+</details>
