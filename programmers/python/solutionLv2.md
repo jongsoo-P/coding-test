@@ -145,3 +145,37 @@ def solution(numbers):
     return answer
 ```
 </details>
+
+
+# 오픈채팅방
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/42888
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+nickname = {}
+messageLog = []
+def recordLog(record):
+    recordStrArr = record.split(" ")
+    if recordStrArr[0] == "Enter":
+        nickname[recordStrArr[1]] = recordStrArr[2]
+        messageLog.append([1,recordStrArr[1]])
+    elif recordStrArr[0] == "Leave":
+        messageLog.append([2,recordStrArr[1]])
+    else:
+        nickname[recordStrArr[1]] = recordStrArr[2]
+def printLog(log):
+    result = f'{nickname[log[1]]}님이 {"들어왔습니다" if log[0]==1 else "나갔습니다"}.'
+    return result
+def solution(record):
+    answer = []
+    for i in record:
+        recordLog(i)
+    for i in messageLog:
+        answer.append(printLog(i))
+    return answer
+```
+</details>
