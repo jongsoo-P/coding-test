@@ -179,3 +179,24 @@ def solution(record):
     return answer
 ```
 </details>
+
+
+# 스킬트리
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/49993
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+import re
+def solution(skill, skill_trees):
+    answer = 0
+    for tree in skill_trees:
+        tree = re.sub(f'[^{skill}]','',tree)
+        if skill.find(tree) == 0:
+            answer += 1
+    return answer
+```
+</details>
