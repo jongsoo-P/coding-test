@@ -1033,3 +1033,21 @@ def solution(n):
     return len(answer)
 ```
 </details>
+
+
+## 폰켓몬
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/1845
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(nums):
+    lenSetNum = len(set(nums))
+    maxNum = len(nums)/2
+    answer = min(maxNum,lenSetNum)
+    return answer
+```
+</details>
