@@ -1051,3 +1051,32 @@ def solution(nums):
     return answer
 ```
 </details>
+
+
+## 완주하지 못한 선수
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/42576
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def dictFunction(nameDict, nameList):
+    for i in nameList:
+        if i in nameDict:
+            nameDict.pop(i)
+        else:
+            nameDict[i] = 1
+    return nameDict
+
+def solution(participant, completion):
+    answer = ''
+    nameDict = {}
+    nameDict = dictFunction(nameDict, participant)
+    nameDict = dictFunction(nameDict, completion)
+    answer = list(nameDict.keys())[0]
+    return answer
+```
+</details>
+
