@@ -200,3 +200,25 @@ def solution(skill, skill_trees):
     return answer
 ```
 </details>
+
+
+# 전화번호 목록
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/42577
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(phone_book):
+    numberDict = dict.fromkeys(phone_book, 1)
+    for number in numberDict:
+        tempNum = ""
+        for num in list(number):
+            tempNum += num
+            if tempNum in numberDict and tempNum != number:
+                return False
+    return True
+```
+</details>
