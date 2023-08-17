@@ -222,3 +222,25 @@ def solution(phone_book):
     return True
 ```
 </details>
+
+
+# 이진 변환 반복하기
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/70129
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+def solution(s):
+    countZero = 0
+    count = 0
+    while s != "1":
+        countZero += s.count("0")
+        count += 1
+        s = bin(len(s.replace("0","")))[2:]
+    answer = [count,countZero]
+    return answer
+```
+</details>
