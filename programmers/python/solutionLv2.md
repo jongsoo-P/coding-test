@@ -244,3 +244,33 @@ def solution(s):
     return answer
 ```
 </details>
+
+
+# 기능 개발
+
+-   링크 : https://school.programmers.co.kr/learn/courses/30/lessons/42586
+-   Python3
+
+<details>
+<summary>접기/펼치기</summary>
+
+```py
+import math
+def solution(progresses, speeds):
+    answer = []
+    minDay = math.ceil((100-progresses[0])/speeds[0])
+    countProgress = 1
+    for idx, i in enumerate(progresses[1:]):
+        day = math.ceil((100-i)/speeds[idx+1])
+        if minDay >= day:
+            countProgress += 1
+        else:
+            minDay = day
+            answer.append(countProgress)
+            countProgress = 1
+    day = math.ceil((100-progresses[-1])/speeds[-1])
+    answer.append(countProgress if minDay >= day else 1)
+    return answer
+```
+</details>
+
